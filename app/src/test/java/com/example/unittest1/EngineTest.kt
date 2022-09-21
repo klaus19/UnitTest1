@@ -17,10 +17,12 @@ class EngineTest {
 
     }
 
+    //Checking both conditions where it fails and succeeds the test.
     @Test
     fun engineTurnsOff(){
+        engine.turnOn()
         engine.turnOff()
-        assertEquals(false,engine.isTurnedOn)
+        assertEquals(true,engine.isTurnedOn)
         assertEquals(40,engine.temperature)
     }
 }
